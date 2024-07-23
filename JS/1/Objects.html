@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+    const amazon =
+    {
+        name:'basketvall',
+        price: 2000,
+        product1 :{
+            name : 'bat',
+            price: 3000
+        },
+        product2 : {
+            name: 'Bat',
+            price: 3000
+        }
+    }
+   
+    console.log (iSameProduct(amazon.product1, amazon.product2));
+
+    console.log(amazon.product1.name.toUpperCase());
+
+    function iSameProduct(product1, product2)
+    {
+        if(JSON.stringify(product1)==JSON.stringify(product2))
+        {
+            return true;
+        }
+        else
+        {
+            return false
+        }
+    }
+    
+    
+    
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Amazon Shipping calculator</p>
+    <p>Order under $40 = +$10 Shipping</p>
+    <p>Order over $40 = Free Shipping</p>
+    <input  class="box" type="text" placeholder="--Enter Amount--" onkeydown="check()" >
+    <button class="butt" onclick="calc()">Calculate</button>
+    <p class="output"></p>
+</body>
+<script>
+    function check()
+    {
+        if(event.key==='Enter')
+    {
+        calc();
+    }
+    }
+
+    function calc()
+    {
+        const input = document.querySelector('.box');
+        const output = document.querySelector('.output');
+        let amount = Number(input.value);
+        if(!amount){
+            output.innerText='Please enter valid amount';
+        }
+        else{
+            output.innerText=(amount>40)? `$ ${amount}`: `$ ${amount+10}`;    
+        }
+       
+    }
+</script>
+
+</html>

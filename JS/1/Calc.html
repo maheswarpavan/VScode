@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        button{
+            width: 25px;
+            padding: 5px;
+            margin: 7px;
+        }
+    </style>
+</head>
+<body>
+  <button onclick="fun(cal+=1)">1</button>
+  <button onclick="fun(cal+=2)">2</button>
+  <button onclick="fun(cal+=3)">3</button>
+  <button onclick="fun(cal+='+')">+</button><br>
+  <button onclick="fun(cal+=4)">4</button>
+  <button onclick="fun(cal+=5)">5</button>
+  <button onclick="fun(cal+=6)">6</button>
+  <button onclick="fun(cal+='-')">-</button><br>
+  <button onclick="fun(cal+=7)">7</button>
+  <button onclick="fun(cal+=8)">8</button>
+  <button onclick="fun(cal+=9)">9</button>
+  <button onclick="fun(cal+='*')">*</button><br>
+
+  <button onclick="fun(cal+=0)">0</button>
+  <button onclick="sum();"> = </button>
+
+  <button onclick="fun(cal='')" style="width: 70px;">Reset</button>
+
+</body>
+<script>
+  let cal = '';
+  function fun()
+  {
+    console.log(cal);
+  }
+  function sum()
+  {
+    console.log(eval(cal))
+  }
+</script>
+</html>
